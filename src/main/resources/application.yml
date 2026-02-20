@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bdcopre
+    username: postgres
+    password: tu_contraseña_aquí
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 53248
+
+# JWT
+app:
+  jwt-secret: bdcopreSecretKey1234567890123456789012
+  jwt-expiration-ms: 86400000
